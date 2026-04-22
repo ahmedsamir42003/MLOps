@@ -1,0 +1,6 @@
+[2026-04-22 08:42:36,545][__main__][INFO] - Loading data from C:\Users\Ideol\Documents\projects\MLOps\data\train.csv
+[2026-04-22 08:42:36,578][__main__][INFO] - Instantiating model: LogisticRegression
+[2026-04-22 08:42:36,578][__main__][INFO] - Training pipeline...
+[2026-04-22 08:42:36,628][__main__][INFO] - Evaluating...
+[2026-04-22 08:42:36,649][__main__][INFO] - Model Accuracy: 0.7989
+[2026-04-22 08:42:36,655][__main__][INFO] - Model saved locally to best_titanic_model.joblib

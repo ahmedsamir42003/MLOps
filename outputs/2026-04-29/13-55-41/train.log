@@ -1,0 +1,6 @@
+[2026-04-29 13:55:41,148][__main__][INFO] - Loading data from C:\Users\Ideol\Documents\projects\MLOps\data\train.csv
+[2026-04-29 13:55:41,164][__main__][INFO] - Instantiating model: RandomForest
+[2026-04-29 13:55:41,236][__main__][INFO] - Training pipeline...
+[2026-04-29 13:55:41,598][__main__][INFO] - Evaluating...
+[2026-04-29 13:55:41,632][__main__][INFO] - Model Accuracy: 0.8156
+[2026-04-29 13:55:41,707][__main__][INFO] - Model saved locally to best_titanic_model.joblib

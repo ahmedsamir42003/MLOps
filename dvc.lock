@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  train_model:
+    cmd: python src/train.py
+    deps:
+    - path: data/train.csv
+      hash: md5
+      md5: 2309cc5f04782ed9bb6016d9f4e381cf
+      size: 61194
+    - path: src/train.py
+      hash: md5
+      md5: 3ff8116836ee0cd0313c5b2b9500f470
+      size: 1722
+    outs:
+    - path: models/model.joblib
+      hash: md5
+      md5: 6322595580749cec695741f2cd142212
+      size: 2421611

@@ -1,0 +1,6 @@
+[2026-04-29 14:20:56,817][__main__][INFO] - Loading data from C:\Users\Ideol\Documents\projects\MLOps\data\train.csv
+[2026-04-29 14:20:56,832][__main__][INFO] - Instantiating model: LogisticRegression
+[2026-04-29 14:20:56,833][__main__][INFO] - Training pipeline...
+[2026-04-29 14:20:56,868][__main__][INFO] - Evaluating...
+[2026-04-29 14:20:56,886][__main__][INFO] - Model Accuracy: 0.7989
+[2026-04-29 14:20:56,895][__main__][INFO] - Model saved locally to models/LogisticRegression.joblib

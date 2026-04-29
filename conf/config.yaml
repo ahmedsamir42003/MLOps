@@ -7,4 +7,4 @@ data:
   test_size: 0.2
   random_state: 42
 
-model_save_path: "models/model.joblib"
+model_save_path: "models/${model.name}.joblib"

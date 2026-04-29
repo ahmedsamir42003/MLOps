@@ -1,0 +1,9 @@
+model:
+  name: LogisticRegression
+  params:
+    max_iter: 1000
+data:
+  train_path: data/train.csv
+  test_size: 0.2
+  random_state: 42
+model_save_path: models/${model.name}.joblib

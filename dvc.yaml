@@ -5,4 +5,11 @@ stages:
     - data/train.csv
     - src/train.py
     outs:
-    - models/model.joblib
+    - models/RandomForest.joblib
+  train_lr:
+    cmd: python src/train.py model=lr
+    deps:
+    - data/train.csv
+    - src/train.py
+    outs:
+    - models/LogisticRegression.joblib

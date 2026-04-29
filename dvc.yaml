@@ -1,15 +1,18 @@
 stages:
-  train_model:
-    cmd: python src/train.py
+  train_rf:
+    cmd: python src/train.py model=rf
     deps:
-    - data/train.csv
-    - src/train.py
+      - data/train.csv
+      - src/train.py
+      - conf/
     outs:
-    - models/RandomForest.joblib
+      - models/RandomForest.joblib
+
   train_lr:
     cmd: python src/train.py model=lr
     deps:
-    - data/train.csv
-    - src/train.py
+      - data/train.csv
+      - src/train.py
+      - conf/
     outs:
-    - models/LogisticRegression.joblib
+      - models/LogisticRegression.joblib

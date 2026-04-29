@@ -1,0 +1,6 @@
+[2026-04-29 14:28:21,443][__main__][INFO] - Loading data from C:\Users\Ideol\Documents\projects\MLOps\data\train.csv
+[2026-04-29 14:28:21,463][__main__][INFO] - Instantiating model: RandomForest
+[2026-04-29 14:28:21,526][__main__][INFO] - Training pipeline...
+[2026-04-29 14:28:21,891][__main__][INFO] - Evaluating...
+[2026-04-29 14:28:21,921][__main__][INFO] - Model Accuracy: 0.8156
+[2026-04-29 14:28:22,003][__main__][INFO] - Model saved locally to models/RandomForest.joblib

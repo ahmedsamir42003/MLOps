@@ -1,5 +1,8 @@
 import logging
 
+import dagshub
+import mlflow
+
 import hydra
 import joblib
 from hydra.utils import to_absolute_path
@@ -37,17 +40,24 @@ def main(cfg: DictConfig):
 
     preprocessor = get_preprocessing_pipeline()
     clf = Pipeline(steps=[("preprocessor", preprocessor), ("classifier", model)])
+    
+    dagshub.init(repo_owner='ahmedsamir42003', repo_name='MLOps', mlflow=True)
+    
+    with mlflow.start_run():
+        
+        log.info("Training pipeline...")
+        clf.fit(X_train, y_train)
 
-    log.info("Training pipeline...")
-    clf.fit(X_train, y_train)
+        log.info("Evaluating...")
+        y_pred = clf.predict(X_test)
+        acc = accuracy_score(y_test, y_pred)
+        log.info(f"Model Accuracy: {acc:.4f}")
 
-    log.info("Evaluating...")
-    y_pred = clf.predict(X_test)
-    acc = accuracy_score(y_test, y_pred)
-    log.info(f"Model Accuracy: {acc:.4f}")
-
-    joblib.dump(clf, cfg.model_save_path)
-    log.info(f"Model saved locally to {cfg.model_save_path}")
+        joblib.dump(clf, cfg.model_save_path)
+        log.info(f"Model saved locally to {cfg.model_save_path}")
+        
+        mlflow.log_metric("accuracy", acc)
+        mlflow.sklearn.log_model(clf, "model")
 
 
 if __name__ == "__main__":

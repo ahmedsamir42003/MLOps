@@ -1,0 +1,14 @@
+[2026-05-05 18:05:35,146][__main__][INFO] - Loading data from C:\Users\Ideol\Documents\projects\MLOps\data\train.csv
+[2026-05-05 18:05:35,193][__main__][INFO] - Instantiating model: RandomForest
+[2026-05-05 18:05:51,475][httpx][INFO] - HTTP Request: POST https://dagshub.com/login/oauth/middleman "HTTP/1.1 200 OK"
+[2026-05-05 18:05:52,758][httpx][INFO] - HTTP Request: POST https://dagshub.com/login/oauth/access_token "HTTP/1.1 200 OK"
+[2026-05-05 18:05:54,057][httpx][INFO] - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-05-05 18:05:54,064][dagshub][INFO] - Accessing as ahmedsamir42003
+[2026-05-05 18:05:55,282][httpx][INFO] - HTTP Request: GET https://dagshub.com/api/v1/repos/ahmedsamir42003/MLOps "HTTP/1.1 200 OK"
+[2026-05-05 18:05:56,395][httpx][INFO] - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-05-05 18:05:56,399][dagshub][INFO] - Initialized MLflow to track repo "ahmedsamir42003/MLOps"
+[2026-05-05 18:05:56,400][dagshub][INFO] - Repository ahmedsamir42003/MLOps initialized!
+[2026-05-05 18:06:00,647][__main__][INFO] - Training pipeline...
+[2026-05-05 18:06:01,072][__main__][INFO] - Evaluating...
+[2026-05-05 18:06:01,112][__main__][INFO] - Model Accuracy: 0.8156
+[2026-05-05 18:06:01,204][__main__][INFO] - Model saved locally to models/RandomForest.joblib

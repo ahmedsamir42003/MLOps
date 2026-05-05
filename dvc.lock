@@ -30,8 +30,8 @@ stages:
       size: 61194
     - path: src/train.py
       hash: md5
-      md5: 3ff8116836ee0cd0313c5b2b9500f470
-      size: 1722
+      md5: 50c38d85373122eaea36e8d17c90dbbf
+      size: 2019
     outs:
     - path: models/LogisticRegression.joblib
       hash: md5
@@ -51,8 +51,8 @@ stages:
       size: 61194
     - path: src/train.py
       hash: md5
-      md5: 3ff8116836ee0cd0313c5b2b9500f470
-      size: 1722
+      md5: 50c38d85373122eaea36e8d17c90dbbf
+      size: 2019
     outs:
     - path: models/RandomForest.joblib
       hash: md5

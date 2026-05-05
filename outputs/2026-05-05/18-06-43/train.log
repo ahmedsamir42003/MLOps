@@ -1,0 +1,12 @@
+[2026-05-05 18:06:43,246][__main__][INFO] - Loading data from C:\Users\Ideol\Documents\projects\MLOps\data\train.csv
+[2026-05-05 18:06:43,262][__main__][INFO] - Instantiating model: LogisticRegression
+[2026-05-05 18:06:44,479][httpx][INFO] - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-05-05 18:06:44,492][dagshub][INFO] - Accessing as ahmedsamir42003
+[2026-05-05 18:06:45,762][httpx][INFO] - HTTP Request: GET https://dagshub.com/api/v1/repos/ahmedsamir42003/MLOps "HTTP/1.1 200 OK"
+[2026-05-05 18:06:46,854][httpx][INFO] - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2026-05-05 18:06:46,858][dagshub][INFO] - Initialized MLflow to track repo "ahmedsamir42003/MLOps"
+[2026-05-05 18:06:46,860][dagshub][INFO] - Repository ahmedsamir42003/MLOps initialized!
+[2026-05-05 18:06:49,773][__main__][INFO] - Training pipeline...
+[2026-05-05 18:06:49,836][__main__][INFO] - Evaluating...
+[2026-05-05 18:06:49,850][__main__][INFO] - Model Accuracy: 0.7989
+[2026-05-05 18:06:49,860][__main__][INFO] - Model saved locally to models/LogisticRegression.joblib

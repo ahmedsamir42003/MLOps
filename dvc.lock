@@ -19,6 +19,11 @@ stages:
   train_lr:
     cmd: python src/train.py model=lr
     deps:
+    - path: conf/
+      hash: md5
+      md5: 0934bdec68fe549888b842cd28ea32c2.dir
+      size: 290
+      nfiles: 3
     - path: data/train.csv
       hash: md5
       md5: 2309cc5f04782ed9bb6016d9f4e381cf

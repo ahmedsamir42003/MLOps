@@ -24,3 +24,12 @@ This repository serves as a workspace for my MLOps journey. This specific lab fo
 - **Pipeline Tracking:** Automatically tracks dependencies (`data`, `code`, `configs`) and outputs (`.joblib models`) using dvc.yaml and dvc.lock.
 
 ---
+
+## Lab 3
+### 🚀 Key Features
+- **Experiment Tracking with MLflow:** Integrates MLflow via DagsHub to log hyperparameters, performance metrics `Accuracy` , and training artifacts in real-time.
+- **Centralized Model Registry:** register the best-performing model  to the DagsHub Model Registry, enabling version control for trained weight.
+- **Model Lifecycle Management:** Implements a professional workflow by transitioning models through stages (`Staging`, `Production`, `Archived`) directly from the UI .
+- **Production-Ready Inference:** Features a decoupled prediction script that pulls the "Production" tagged model from the cloud, eliminating the need for local .joblib files during deployment.
+
+---

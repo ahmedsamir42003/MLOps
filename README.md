@@ -1,9 +1,3 @@
----
-title: Titanic Prediction API
-sdk: docker
-app_port: 7860
----
-
 # Titanic MLOps Training Pipeline
 
 This repository serves as a workspace for my MLOps journey. This specific lab focuses on building a fully automated, reproducible training pipeline for the Titanic dataset using Lightning AI and Scikit-Learn.
@@ -11,7 +5,6 @@ This repository serves as a workspace for my MLOps journey. This specific lab fo
 ---
 
 ## lab 1
-
 ### 🚀 Key Features
 - **Automated Pipeline**: Includes data loading, preprocessing (imputation/scaling/encoding), training, and model saving in one command.
 - **Configurable**: Switch between `RandomForest` and `LogisticRegression` via YAML configs without touching the code.
@@ -20,9 +13,7 @@ This repository serves as a workspace for my MLOps journey. This specific lab fo
 
 ---
 ## lab 2
-
 ### 🚀 Key Features
-
 - **Versioned Experiments:** Uses DVC to track datasets, model outputs, and pipeline stages, ensuring full reproducibility of machine learning experiments.
 - **Multiple Model Runs:** Supports running and comparing different models (`RandomForest`, `LogisticRegression`) using Hydra configuration overrides or separate DVC pipeline stages.
 - **Remote Storage:** Stores large artifacts (`datasets and trained models`) in DagsHub remote storage instead of Git, keeping the repository lightweight.
@@ -39,3 +30,15 @@ This repository serves as a workspace for my MLOps journey. This specific lab fo
 - **Production-Ready Inference:** Features a decoupled prediction script that pulls the "Production" tagged model from the cloud, eliminating the need for local .joblib files during deployment.
 
 ---
+
+## Lab 4
+### 🚀 Key Features
+- **Production API with FastAPI:** Wraps the Titanic prediction model in a high-performance REST API, making the model accessible over the web via HTTPS.
+- **Scalable Batch Inference:** Designed the solution to be versatile; it accepts both single records and batch requests (multiple records in one JSON array), optimizing throughput for large datasets.
+- **Cloud Deployment on Hugging Face:** Successfully deployed the serving solution to Hugging Face Spaces using a custom Docker environment and `uv` for lightning-fast dependency resolution.
+- **External API Testing with Bruno:** Validated the live endpoint using the Bruno API client, ensuring the model handles real-world JSON inputs and returns accurate survival predictions.
+- **Dynamic Model Loading:** The API does not store the model locally; it pulls the "Production" version directly from the DagsHub Model Registry at startup using secure environment secrets.
+- **🔗 Live API Endpoint:** `https://ahmed-samir-abdel-fattah-titanic-prediction-api.hf.space/predict`
+
+---
+  

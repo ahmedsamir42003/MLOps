@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 outputs/
 mlflow.db
+.env
+.prefect/
+prefect_home/

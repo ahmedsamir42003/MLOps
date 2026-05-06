@@ -41,4 +41,11 @@ This repository serves as a workspace for my MLOps journey. This specific lab fo
 - **🔗 Live API Endpoint:** `https://ahmed-samir-abdel-fattah-titanic-prediction-api.hf.space/predict`
 
 ---
-  
+
+## Lab 5
+### 🚀 Key Features
+- **Cloud Data Warehouse with MotherDuck:** Loaded the entire test dataset into MotherDuck, a serverless DuckDB cloud database, enabling scalable and cost-effective data storage without infrastructure management.
+- **Orchestrated Batch Scoring with Prefect:** Built a batch inference job using Prefect to orchestrate the complete prediction pipeline, including extraction, transformation, model loading, and results storage.
+- **Secure Token Management:** Implemented secure authentication for both MotherDuck and DagsHub using `.env` files with `python-dotenv`, ensuring sensitive credentials are never hardcoded in version control.
+- **Automated Data Pipeline:** The Prefect flow automatically extracts raw test data from MotherDuck, applies necessary transformations, loads the "Production" model from DagsHub Model Registry, generates survival predictions, and saves the results back to MotherDuck.
+- **End-to-End Automation:** Combined cloud data warehousing, experiment tracking, model registry, and workflow orchestration into a single, reproducible batch scoring pipeline.

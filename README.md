@@ -49,3 +49,16 @@ This repository serves as a workspace for my MLOps journey. This specific lab fo
 - **Secure Token Management:** Implemented secure authentication for both MotherDuck and DagsHub using `.env` files with `python-dotenv`, ensuring sensitive credentials are never hardcoded in version control.
 - **Automated Data Pipeline:** The Prefect flow automatically extracts raw test data from MotherDuck, applies necessary transformations, loads the "Production" model from DagsHub Model Registry, generates survival predictions, and saves the results back to MotherDuck.
 - **End-to-End Automation:** Combined cloud data warehousing, experiment tracking, model registry, and workflow orchestration into a single, reproducible batch scoring pipeline.
+
+
+---
+
+## Lab 6
+### 🚀 Key Features
+- **Automated CI/CD Pipeline:** Implements a full GitOps workflow using GitHub Actions with three stages: `test`, `build`, and `deploy`, triggered automatically on every push to `main`.
+- **Code Quality Enforcement:** Runs automated linting via `ruff` using a custom `scripts/lint.sh` script to ensure consistent code standards across the codebase.
+- **Automated Testing:** Executes unit tests using `pytest` with `uv` as the package manager, ensuring all components are verified before any build or deployment begins.
+- **Containerized Build:** Automatically builds a Docker image of the Sentiment Analyzer server and pushes it to Docker Hub using masked and hidden CI/CD secrets for secure authentication.
+- **Cloud Deployment on Lightning AI:** Deploys the containerized application to Lightning AI using the `lightning-sdk` and a dedicated `deploy.py` script, with all credentials managed securely via GitHub repository secrets.
+- **Secure Secret Management:** All sensitive credentials (Docker Hub token, Lightning AI API key, User ID, Teamspace) are stored as masked GitHub Actions secrets — never hardcoded in the repository.
+- **🔗 Github repo:** `https://github.com/ahmedsamir42003/sentiment-analyzer-server-task-main`
